@@ -62,7 +62,8 @@ app.use('/api/books', bookRouter);
 // res - response from server
 app.get('/', function(req, res) {
     // response from the server
-    res.send('welcome to my API!!!!');
+    // res.send('welcome to my API!!!!');
+    res.sendfile('./index.html');
 });
 
 
