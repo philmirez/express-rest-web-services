@@ -13,10 +13,10 @@
 1. Download Postman
 2. Getting data is simple, see below.
 3. Post, Patch, and Remove require a Header and a Body
-- Headers
- * content-type : application/json
-- Body
- * Depends on what you're trying to do ;)
+#### Headers
+ - content-type : application/json
+#### Body
+ - Depends on what you're trying to do ;)
 
 ## Getting Data
 1. Two routers have been created to accept either filter by 
