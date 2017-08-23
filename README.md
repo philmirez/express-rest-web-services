@@ -23,8 +23,11 @@
 - `bookId` e.g. `http://localhost:8000/api/books/599102647d51ecf30a6bd887` 
 - `genre` e.g. `http://localhost:8000/api/books/?genre=Historical%20Fiction`
 
-## Post, Patch, or Remove Data
+## Post, Put, Patch, or Remove Data
 1. Send your Header and Body as well as your request type.
 
 ## Running Tests
 `gulp test`
+
+## HATEOS
+Allows API to self document.
