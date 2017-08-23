@@ -9,7 +9,22 @@
 
 4. Follow `DataImportInstructions.txt` instructions to import mongodb data.
 
+## Postman
+1. Download Postman
+2. Getting data is simple, see below.
+3. Post, Patch, and Remove require a Header and a Body
+- Headers
+ * content-type : application/json
+- Body
+ * Depends on what you're trying to do ;)
+
 ## Getting Data
 1. Two routers have been created to accept either filter by 
 - `bookId` e.g. `http://localhost:8000/api/books/599102647d51ecf30a6bd887` 
 - `genre` e.g. `http://localhost:8000/api/books/?genre=Historical%20Fiction`
+
+## Post, Patch, or Remove Data
+1. Send your Header and Body as well as your request type.
+
+## Running Tests
+`gulp test`
