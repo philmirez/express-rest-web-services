@@ -25,9 +25,13 @@ var app = express();
 // looks for variable in environment and if not there then it will set it at 3000
 var port = process.env.PORT || 8000;
 
-var db = mongoose.connect('mongodb://localhost/bookAPI',{
-    useMongoClient: true
-});
+var db;
+
+if(process.env.ENV == 'Test')
+    db = mongoose.connect('mongodb://localhost/bookAPI_test',{useMongoClient: true});
+else{
+    db = mongoose.connect('mongodb://localhost/bookAPI',{useMongoClient: true});
+}
 
 var Book = require ('./models/bookModel');
 
@@ -68,4 +72,7 @@ app.get('/', function(req, res) {
 
 app.listen(port, function() {
     console.log('Gulp is running on PORT: ' + port);
-})
+});
+
+// allows supertest to exec on the app
+module.exports = app;
